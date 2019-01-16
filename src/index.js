@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
+// importing Reagent components
 const { Link, Image, Text } = window.app.core;
 
 class App extends Component {
@@ -41,6 +42,7 @@ class App extends Component {
 const renderApp = () =>
   ReactDOM.render(<App />, document.getElementById("root"));
 
+// exporting re-rendering function for Figwheel :after-load hook
 window.renderApp = renderApp;
 
 renderApp();

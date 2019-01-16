@@ -1,5 +1,6 @@
 {:deps {org.clojure/clojurescript {:mvn/version "1.10.439"}
         reagent {:mvn/version "0.8.1"
+                 ;; excluding JS deps from cljs build to avoid duplication
                  :exclusions [cljsjs/react cljsjs/react-dom]}
         com.bhauman/figwheel-main {:mvn/version "0.2.0"}}
  :paths ["cljs-src" "target" "public"]

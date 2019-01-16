@@ -3,7 +3,9 @@
  :output-dir "public/cljs-out/dev"
  :output-to "public/cljs-out/main.js"
  :asset-path "cljs-out/dev"
- :infer-externs true
+ :infer-externs true ;; turning it on so we don't need including externs manually
+
+ ;; aliasing JS modules to variables in global scope exported by deps.js
  :foreign-libs [{:provides ["react" "react-dom"]
                  :global-exports {react React
                                   react-dom ReactDOM}
