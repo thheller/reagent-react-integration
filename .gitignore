@@ -24,3 +24,5 @@ yarn-error.log*
 
 .cpcache
 public/cljs-out
+public/deps.js
+public/main.js
