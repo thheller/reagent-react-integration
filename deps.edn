@@ -1,0 +1,7 @@
+{:deps {org.clojure/clojurescript {:mvn/version "1.10.439"}
+        reagent {:mvn/version "0.8.1"
+                 :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]}
+        com.bhauman/figwheel-main {:mvn/version "0.2.0"}}
+ :paths ["cljs-src" "target" "public"]
+ :aliases {:dev {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
+           :prod {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}}}

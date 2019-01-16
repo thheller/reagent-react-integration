@@ -30,3 +30,15 @@
     transform: rotate(360deg);
   }
 }
+
+button {
+  padding: 8px 16px;
+  text-transform: uppercase;
+  border: 1px solid #61dafb;
+  font-size: 12px;
+  border-radius: 5px;
+  color: #61dafb;
+  background: transparent;
+  margin: 24px 0 8px;
+  outline: none;
+}

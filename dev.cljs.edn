@@ -1,0 +1,10 @@
+^{:open-url false}
+{:main app.core
+ :output-dir "public/cljs-out/dev"
+ :output-to "public/cljs-out/main.js"
+ :asset-path "cljs-out/dev"
+ :foreign-libs [{:provides ["react"
+                            "react-dom"]
+                 :global-exports {react React
+                                  react-dom ReactDOM}
+                 :file "stub.js"}]}
