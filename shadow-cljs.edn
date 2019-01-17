@@ -1,0 +1,18 @@
+;; shadow-cljs configuration
+{:source-paths
+ ["cljs-src"]
+
+ :dependencies
+ [[reagent "0.8.1"]]
+
+ :builds
+ {:app {:target :npm-module
+        :runtime :browser
+        :entries [app.core]
+        ;; convenience to not use relative paths in .jsx files
+        ;; relative is fine though
+        :output-dir "node_modules/shadow-cljs"
+        :devtools
+        {:autoload true
+         :http-root "public"
+         :http-port 3000}}}}

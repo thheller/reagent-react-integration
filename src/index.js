@@ -2,7 +2,11 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 
 // importing Reagent components
-const { Link, Image, Text } = window.app.core;
+import { Image, Text, Link } from "shadow-cljs/app.core";
+
+if (process.env.NODE_ENV !== 'production') {
+  require("shadow-cljs/shadow.cljs.devtools.client.browser");
+}
 
 class App extends Component {
   state = {
@@ -14,21 +18,21 @@ class App extends Component {
         <header className="App-header">
           <Image src="logo.svg" className="App-logo" alt="logo" />
           <Text>
-            Edit <code>cljs-src/core.cljs</code> and save to hot-reload.
+            Edit <code>cljs-src/app/core.cljs</code> and save to hot-reload.
           </Text>
           {this.state.link && (
             <>
               <Link href="http://reagent-project.github.io/">
                 Learn Reagent
               </Link>
-              <Link href="https://figwheel.org/">Learn Figwheel</Link>
+              <Link href="https://shadow-cljs.org/">Learn shadow-cljs</Link>
             </>
           )}
           <button onClick={() => this.setState({ link: !this.state.link })}>
             Toggle links
           </button>
           <Text style={{ fontSize: 12, maxWidth: 420 }}>
-            Toggle link visibility and change <code>app.core.link</code>{" "}
+            Toggle link visibility and change <code>core.link</code>{" "}
             component. This will hot-reload namespace code, but shouldn't update
             the UI since changed component is unmounted. Once you toggle it
             back, you'll see updated Reagent component.
@@ -42,7 +46,7 @@ class App extends Component {
 const renderApp = () =>
   ReactDOM.render(<App />, document.getElementById("root"));
 
-// exporting re-rendering function for Figwheel :after-load hook
+// exporting re-rendering function for live-reload
 window.renderApp = renderApp;
 
 renderApp();

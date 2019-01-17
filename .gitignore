@@ -26,3 +26,6 @@ yarn-error.log*
 public/cljs-out
 public/deps.js
 public/main.js
+
+.shadow-cljs/
+.nrepl-port

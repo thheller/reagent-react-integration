@@ -4,15 +4,17 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-loader": "8.0.4",
     "babel-preset-react-app": "^7.0.0",
+    "create-react-class": "^15.6.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "shadow-cljs": "^2.7.15",
     "webpack": "4.19.1"
   },
   "scripts": {
     "start:js": "NODE_ENV=development webpack --mode=development --watch",
-    "start:cljs": "clojure -A:dev",
+    "start:cljs": "shadow-cljs watch app",
     "build:js": "NODE_ENV=production webpack --mode=production",
-    "build:cljs": "clojure -A:prod",
+    "build:cljs": "shadow-cljs release app",
     "test": "node scripts/test.js"
   },
   "devDependencies": {

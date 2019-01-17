@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks app.core
+(ns app.core
   (:require [reagent.core :as r]))
 
 ;; Generic Reagent components
@@ -35,5 +35,5 @@
              (r/children this))))))
 
 ;; Will be called by Figwheel everytime cljs source files change
-(defn ^:after-load render-app []
+(defn ^:dev/after-load render-app []
   (js/renderApp))
