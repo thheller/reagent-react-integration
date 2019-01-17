@@ -9,3 +9,12 @@ You want to start gradually using ClojureScript/Reagent in an existing JavaScrip
 ### Problems
 
 None.
+
+```
+yarn
+yarn start:cljs
+# wait till first build complete message (otherwise webpack will complain)
+# start webpack in a different terminal
+yarn start:js
+open http://localhost:3000
+```
